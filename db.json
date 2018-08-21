@@ -1,0 +1,112 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Yeah barnehage",
+      "address": "Barnehageveien 113",
+      "phone": 44220222,
+      "email": "Yeah@barnehage.no",
+      "contactPerson": "Jo Gurther",
+      "abo": "4 retter",
+      "abonnementId": 2,
+      "portions": 80
+    },
+    {
+      "id": 2,
+      "name": "Hurramegrundt barnehage",
+      "address": "Barnehageveien 11",
+      "phone": 44220222,
+      "email": "Hurramegrundt@barnehage.no",
+      "contactPerson": "Jo Gurth",
+      "abo": "4 retter",
+      "abonnementId": 2,
+      "portions": 90
+    },
+    {
+      "id": 3,
+      "name": "Nåerdetnok barnehage",
+      "address": "Barnehageveien 241",
+      "phone": 20332332,
+      "email": "Naaerdetnok@barnehage.no",
+      "contactPerson": "Hans Kerom",
+      "abo": "5 retter",
+      "abonnementId": 1,
+      "portions": 70
+    },
+    {
+      "id": 4,
+      "name": "Easyliving barnehage",
+      "address": "Barnehageveien 1",
+      "phone": 5323252,
+      "email": "Easyliving@barnehage.no",
+      "contactPerson": "Vegard B. Eider",
+      "abo": "5 retter",
+      "abonnementId": 1,
+      "portions": 60
+    },
+    {
+      "id": 5,
+      "name": "Strawberriesforever barnehage",
+      "address": "Barnehageveien 666",
+      "phone": 67352453,
+      "email": "Strawberriesforever@barnehage.no",
+      "contactPerson": "Kjell T. Ringers",
+      "abo": "3 retter",
+      "abonnementId": 3,
+      "portions": 130
+    },
+    {
+      "id": 6,
+      "name": "Akkurat barnehage",
+      "address": "Barnehageveien 336",
+      "phone": 67332233,
+      "email": "akkurat@barnehage.no",
+      "contactPerson": "Tord Enbrak",
+      "abo": "5 retter",
+      "abonnementId": 1,
+      "portions": 80
+    },
+    {
+      "id": 7,
+      "name": "Nettopp barnehage",
+      "address": "Barnehageveien 96",
+      "phone": 67901490,
+      "email": "nettopp@barnehage.no",
+      "contactPerson": "Eva L. Uer",
+      "abo": "3 retter",
+      "abonnementId": 3,
+      "portions": 60
+    },
+    {
+      "id": 8,
+      "name": "Justa barnehage",
+      "address": "Barnehageveien 99",
+      "phone": 55448899,
+      "email": "justa@barnehage.no",
+      "contactPerson": "D. Duck",
+      "abo": "3 retter",
+      "abonnementId": 3,
+      "portions": 100
+    }
+  ],
+  "abonnement": [
+    {
+      "id": 1,
+      "name": "5 lunsjretter pr. dag",
+      "price": 375,
+      "disclaimer": "for 50 - 120 porsjoner"
+    },
+    {
+      "id": 2,
+      "name": "4 lunsjretter pr. dag",
+      "price": 325,
+      "disclaimer": "for 50 - 120 porsjoner"
+    },
+    {
+      "id": 3,
+      "name": "3 lunsjretter pr. dag",
+      "price": 275,
+      "disclaimer": "for 50 - 120 porsjoner"
+    }
+  ]
+}

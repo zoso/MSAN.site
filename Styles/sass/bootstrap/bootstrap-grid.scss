@@ -1,0 +1,55 @@
+/*!
+ * Bootstrap Grid v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@at-root {
+  @-ms-viewport { width: device-width; } // stylelint-disable-line at-rule-no-vendor-prefix
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@import "functions";
+@import "variables";
+
+@import "mixins/breakpoints";
+@import "mixins/forms";
+@import "mixins/gradients";
+@import "mixins/buttons";
+@import "mixins/border-radius";
+@import "mixins/box-shadow";
+@import "mixins/clearfix";
+@import "mixins/hover";
+@import "mixins/image";
+@import "mixins/visibility";
+@import "mixins/transition";
+@import "mixins/text-emphasis";
+@import "mixins/text-hide";
+@import "mixins/text-truncate";
+@import "mixins/grid-framework";
+@import "mixins/grid";
+
+@import "utilities/align";
+@import "utilities/clearfix";
+@import "utilities/text";
+@import "utilities/visibility";
+
+@import "grid";
+@import "button-group";
+@import "buttons";
+@import "forms";
+@import "input-group"; 
+
+// Manually adding .img-fluid (formerly known as .img-responsive in Bootstrap 3)
+.img-fluid { @include img-fluid(); }

@@ -1,0 +1,20 @@
+{
+    "presets": [
+        ["env", {
+            "targets": {
+                "node": "current",
+                "browsers": [
+                  "last 10 chrome versions",
+                  "last 10 firefox versions",
+                  "last 2 iOS major versions",
+                  "last 4 Edge versions",
+                  "Explorer 11"
+                ]
+            }
+        }]
+    ],
+    "plugins": [
+        "babel-project-relative-import",
+        "transform-object-rest-spread"
+    ]
+}

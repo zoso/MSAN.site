@@ -1,0 +1,152 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    min-height: 100vh;
+    //font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+header,
+section,
+footer,
+main,
+nav,
+ul,
+ol,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border: 0;
+}
+
+.flex-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.flex-header {
+    background-color: #fafafa;
+    padding: .5rem 0;
+    a {
+        color: #66001e;
+        text-decoration: none;
+        &:visited,
+        &:active {
+            text-decoration: none;
+            color: #66001e;
+        }
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+.flex-nav {
+    background-color: #ededed;
+    color: black;
+}
+.flex-main {
+    display: flex;
+    background-color: #fafafa;
+    flex: 1;
+    padding: .5rem 0;
+}
+
+
+.flex-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem 0;
+    background-color: #333f48;
+    color: white;
+}
+
+a {
+    color: #66001e;
+    text-decoration: none;
+    &:active,
+    &:visited {
+        color: #66001e;
+        text-decoration: none;
+    }
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem .74rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #fff;
+    background-color: #444;
+    border-color: #444;
+}
+
+.justify-content-md-center {
+    justify-content: center !important;
+}
+
+label {
+    display: block;
+    position: relative;
+    font-size: .875rem;
+    text-transform: uppercase;
+    color: #717171;
+    margin-bottom: .625rem;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="date"], input[type="password"], input[type="search"], input[type="tel"], input[type="url"], textarea, select {
+    border: 1px solid #cacaca;
+    padding: .83333333rem 1.25rem;
+    background-color: #fff;
+    outline: none;
+    -webkit-transition: border .3s ease-in-out;
+    transition: border .3s ease-in-out;
+    width: 100%;
+    margin-bottom: .625rem;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 0;
+    margin-bottom: .625rem;
+}
