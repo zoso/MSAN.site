@@ -56,12 +56,22 @@
             <div class="col">
                 <div class="row">
                     <div class="col-sm-12">
-                        <label for="courses">Endre meny</label>
+                        <!-- <label for="courses">Endre meny</label>
                         <select name="courses" id="courses" v-on:change="doCoursesChange">
                             <option value="3 retter" :selected="editCourses === '3 retter' ? true : false">3 retter</option>
                             <option value="4 retter" :selected="editCourses === '4 retter' ? true : false">4 retter</option>
                             <option value="5 retter" :selected="editCourses === '5 retter' ? true : false">5 retter</option>
-                        </select>
+                        </select> -->
+                        <!-- <label for="myMenus">Velg</label>
+                        <input type="text" list="theMenus" id="myMenus" name="myMenus" placeholder="f.eks.: 3 retter">
+                        <datalist id="theMenus">
+                            <option v-for="abo in myTestAbo" :value="abo.Name" :key="abo.Id"></option>
+                        </datalist> -->
+                        <ul>
+                            <li v-for="abo in myTestAbo" :key="abo.Id">
+                                {{ abo.Navn }} - gyldig fra: {{ getFixedDate(abo.GyldigFraDato) }} (pris: {{ abo.Priser[0].Pris }},- pr porsjon)
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-sm-12">
                         <!-- http://rangeslider.js.org/ -->
@@ -92,7 +102,7 @@
                 </button>
             </div>
             <div class="col">
-                <button class="btn" type="button" v-on:click="changeAbo">
+                <button class="btn" type="button" v-on:click="getAbonnements">
                     Endre abonnement
                 </button>
             </div>
@@ -107,6 +117,9 @@
 
 <script>
 import GetData from "../../api/ajax_requests.js";
+import Moment from "moment";
+Moment.locale("nb");
+
 export default {
     name: "FindOneUser",
     data() {
@@ -117,7 +130,8 @@ export default {
             endAbo: false,
             editContact: false,
             editCourses: "",
-            editPortions: 0
+            editPortions: 0,
+            myTestAbo: []
         }
     },
     created() {
@@ -130,11 +144,12 @@ export default {
             })
             .catch(err => {
                 console.log("error", err);
-            })
+            }),
+        this.getAbonnements()
     },
     methods: {
-        changeAbo() {
-            this.editAbo = !this.editAbo;
+        getFixedDate(d) {
+            return Moment(d.toString()).format("DD.MM.YYYY");
         },
         doPortionChange(e) {
             this.editPortions = e.target.value;
@@ -171,6 +186,23 @@ export default {
         },
         endAbonnement() {
             this.endAbo = !this.endAbo;
+        },
+        getAbonnements() {
+            if (this.myTestAbo.length === 0) {
+                GetData.testGetAbo()
+                .then(res => {
+                    //console.log("get test", res);
+                    this.myTestAbo = res.data.Abonnementer;
+                    //this.editAbo = !this.editAbo;
+                    console.log(this.myTestAbo);
+                })
+                .catch(err => {
+                    console.log("arhg", err);
+                })
+ 
+            } else {
+                this.editAbo = !this.editAbo;
+            }
         }
     }
 }
